@@ -1,0 +1,4 @@
+#! /data/data/com.termux/files/usr/bin/bash
+
+echo "./compile <file-to-compile> <output-file-name>"
+gcc -o $2 $1
