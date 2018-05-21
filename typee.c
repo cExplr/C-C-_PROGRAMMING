@@ -7,6 +7,7 @@
 #include<stddef.h> //consists wchar_t size_t ptrdiff_t
 #include<uchar.h> // consists cha16_t char32_t
 #include<stdint.h> // consists integer types with specifiedbit width
+#include<float.h>
 
 int main(){
     printf("\n");
@@ -47,6 +48,7 @@ int main(){
 
     printf("\nsize of char16_t from uchar : %d\n",sizeof(char16_t));
     printf("size of char32_t from uchar : %d\n",sizeof(char32_t));
+    printf("size of wchar_t from stddef : %d\n",sizeof(wchar_t));
 
     printf("size of int8_t from stdint : %d\n",sizeof(int8_t));
     printf("INT8_MAX from stdint : %d\n",INT8_MAX);
@@ -63,11 +65,11 @@ int main(){
     printf("size of uint64_t from stdint : %d\n",sizeof(uint64_t));
     printf("\n\nDecimal of A : %d\n",'A');
     printf("decimal of A += 2 : %d",'A'+2);
+    printf("\nfloat -- single precision\ndouble -- double precision\nlong -- extended precision\n");
     printf("\n");
     printf("\\x61 : \x61\n");
-
-
-
-
+    printf("\nFLT_MIN, FLT_MAX and FLT_DIG from float.h : \n%E\n%E\n%d\n",FLT_MIN,FLT_MAX,FLT_DIG);
+    printf("\nDBL_MIN, DBL_MAX, DBL_DIG from float : \n%E\n%E\n%d\n",DBL_MIN,DBL_MAX,DBL_DIG);
+    printf("\nLDBL_MIN, LDBL_MAX, LDBL_DIG from float : \n%LE\n%LE\n%d\n",LDBL_MIN,LDBL_MAX,LDBL_DIG);
     return 0;
 }
